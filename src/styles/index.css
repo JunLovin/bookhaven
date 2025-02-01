@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Liter&display=swap');
+
+:root {
+  --gray: #AAAAAA;
+  --dark-gray: #2C2E39;
+}
+
+/* INFO: Reset to Default */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Liter', sans-serif;
+}
