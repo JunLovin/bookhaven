@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Liter&display=swap');
 
 :root {
-  --gray: #AAAAAA;
-  --dark-gray: #2C2E39;
+  --off-black: #131010;
+  --dark-brown: #543A14;
+  --gold: #F0BB78;
+  --semi-beige: #FFF0DC;
+  --gray: #CCCCCC;
 }
 
 /* INFO: Reset to Default */
