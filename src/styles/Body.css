@@ -1,0 +1,72 @@
+.main-content {
+    height: 100%;
+    width: 100%;
+}
+
+.main-content .bg-change {
+    margin: 0 auto;
+    width: 80%;
+    height: 75vh;
+}
+
+.main-content .bg-change .overlay {
+    position: absolute;
+    margin: 0 auto;
+    background: rgba(0,0,0, 0.5);
+    width: 80%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+}
+
+.main-content .bg-change img {
+    width: 100%;
+    height: 100%;
+}
+
+.main-content .bg-change .overlay .overlay-text {
+    width: 100%;
+    height: 100%;
+    padding: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    color: var(--semi-beige);
+}
+
+.main-content .bg-change .overlay .overlay-text button {
+    width: 18rem;
+    height: 3rem;
+    border: 1px solid var(--gold);
+    border-radius: .5rem;
+    background-color: var(--off-black);
+    color: var(--gold);
+    font-size: 1rem;
+    letter-spacing: .5px;
+    cursor: pointer;
+    font-family: 'Roboto';
+    font-weight: 550;
+}
+
+.main-content .bg-change .overlay .overlay-text button:active {
+    background-color: #000;
+}
+
+.main-content .bg-change .overlay .overlay-text h2 {
+    font-size: 3rem;
+    max-width: 100%;
+    min-width: 50%;
+    margin-bottom: 1.5rem;
+}
+
+.main-content .bg-change .overlay .overlay-text p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    width: 40%;
+}
+
+.main-content .bg-change .overlay .overlay-text p .bookhive {
+    font-weight: bold;
+}
