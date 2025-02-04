@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Liter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --off-black: #131010;
@@ -6,6 +6,7 @@
   --gold: #F0BB78;
   --semi-beige: #FFF0DC;
   --gray: #CCCCCC;
+  --orange: #FF7F20;
 }
 
 /* INFO: Reset to Default */
@@ -18,5 +19,5 @@
 
 body {
   height: 100vh;
-  font-family: 'Liter', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
