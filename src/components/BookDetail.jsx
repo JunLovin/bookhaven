@@ -22,7 +22,7 @@ function BookDetail() {
 
     const handleSearch = e => {
         if (e.key === 'Enter') {
-            fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}`)
+            fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&maxResults=20`)
             .then((res) => res.json())
             .then((res) => {
                 setData(res.items)
