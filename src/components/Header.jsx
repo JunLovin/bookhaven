@@ -1,4 +1,3 @@
-import { API_KEY } from '../config'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '@styles/Header.css'
@@ -8,8 +7,10 @@ import searchIcon from '@public/search.svg'
 import shoppingBag from '@public/shoppingBag.svg'
 import DropDownMenu from './DropdownMenu'
 import Card from './Card'
+import Body from './Body'
 
 function Header() {
+    const [isShow, setIsShow] = useState(true)
 
     const [search, setSearch] = useState('')
     const [data, setData] = useState([])
@@ -17,12 +18,13 @@ function Header() {
 
     const handleSearch = e => {
         if (e.key === 'Enter') {
-            fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=${API_KEY}`)
+            fetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&maxResults=20`)
             .then((res) => res.json())
             .then((res) => {
                 setData(res.items)
             })
             .catch((err) => setError(err))
+            setIsShow(false)
         }
     }
     
@@ -37,12 +39,13 @@ function Header() {
         <>
         <header>
             <nav>
-                <div>
+                <DropDownMenu className="dropdown-mobile" id="dropdown-mobile" firstLi="One" secondLi="Two" thirdLi="Three" menuTitle="Opciones"/>
+                <div className="links-list">
                 <ul>
                     <li><Link to="/d" className="link">One</Link></li>
                     <li><Link to="/d" className="link">Two</Link></li>
                     <li><Link to="/d" className="link">Three</Link></li>
-                    <DropDownMenu/>
+                    <DropDownMenu className="dropdown-menu" firstLi="BookHaven" secondLi="Creator" thirdLi="Contact" menuTitle="Información"/>
                 </ul>
                 </div>
                 <Link to="/">
@@ -53,7 +56,7 @@ function Header() {
                 /></Link>
                 <div className="heart-shopping">
                     <img src={searchIcon} alt="search icon" className="search"/>
-                    <input type="text" value={search} onChange={handleAddSearc} placeholder='Searching Book...' onKeyDown={handleSearch}/>
+                    <input type="text" value={search} onChange={handleAddSearc} placeholder='Searching Book...' onKeyDown={handleSearch} />
                     <img
                     src={heart}
                     alt='books liked'
@@ -71,11 +74,12 @@ function Header() {
             {data.map((element, index) => {
                 return (
                 <Link to={`/book/${element.id}`} key={index} className="link">
-                    <Card items={element} id={element.id} />
+                    <Card items={element} id={element.id}/>
                 </Link>
             )
             })}
         </div>
+        <Body isShow={isShow}/>
         </>
     )
 }
