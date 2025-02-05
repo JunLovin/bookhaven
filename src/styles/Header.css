@@ -13,6 +13,10 @@ header {
     width: 10rem;
 }
 
+#dropdown-mobile {
+    display: none !important;
+}
+
 header nav {
     margin: 0 auto;
     width: 80%;
@@ -21,7 +25,45 @@ header nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1rem;
+}
+
+@media only screen and (max-width: 1300px) {
+    header nav {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    header nav .heart-shopping input {
+        width: 10rem !important;
+    }
+    .dropdown-menu {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .links-list {
+        display: none;
+    }
+    #dropdown-mobile {
+        display: inline-block !important; 
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    header nav .heart-shopping .liked-books, .shopping-bag {
+        display: none !important;
+    }
+    header nav .heart-shopping {
+        width: 10rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #dropdown-mobile {
+        display: none !important;
+    }
 }
 
 header nav ul li {
@@ -78,5 +120,10 @@ header nav .heart-shopping input {
 
 header nav .heart-shopping img {
     cursor: pointer;
-    margin: 0 .6rem;
+    margin: 0 1rem;
+}
+
+.dropdown-menu {
+    border-right: 1px solid var(--gold);
+    border-left: 1px solid var(--gold);
 }
