@@ -4,7 +4,7 @@ import '@styles/DropdownMenu.css'
 import downArrow from '@public/dropdownDown.svg'
 import upArrow from '@public/dropdownUp.svg'
 
-function DropDownMenu() {
+function DropDownMenu({ menuTitle, className, firstLi, secondLi, thirdLi, id }) {
     const [isOpen, setIsOpen] = useState(false)
 
     const handleMouseEnter = () => {
@@ -17,15 +17,15 @@ function DropDownMenu() {
 
     return (
         <>
-        <div className="dropdown-menu" onMouseEnter={() => handleMouseEnter()} onMouseLeave={() => handleMouseLeave()}>
+        <div className={className} id={id} onMouseEnter={() => handleMouseEnter()} onMouseLeave={() => handleMouseLeave()}>
             <button className="dropbtn">
-                Información {isOpen ? <img src={upArrow} alt="close dropdown menu"/> : <img src={downArrow} alt="Open dropdown menu"/>}
+                {menuTitle} {isOpen ? <img src={upArrow} alt="close dropdown menu"/> : <img src={downArrow} alt="Open dropdown menu"/>}
             </button>
             {isOpen && (
                 <div className="dropdown-content" onMouseOver={() => setIsOpen(true)}>
-                    <Link to="/d" className="dropdown-link">BookHive</Link>
-                    <Link to="/" className="dropdown-link">Creador</Link>
-                    <Link to="/" className="dropdown-link">Contacto</Link>
+                    <Link to="/d" className="dropdown-link">{firstLi}</Link>
+                    <Link to="/" className="dropdown-link">{secondLi}</Link>
+                    <Link to="/" className="dropdown-link">{thirdLi}</Link>
                 </div>
             )}
         </div>
