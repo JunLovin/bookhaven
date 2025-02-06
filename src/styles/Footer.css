@@ -1,0 +1,83 @@
+footer {
+    width: 100%;
+    height: 20rem;
+    background-color: var(--off-black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+footer .links-newsletter-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div {
+    background-color: var(--off-black);
+}
+
+footer .footer-info, footer .footer-contact {
+    width: 20%;
+}
+
+footer .footer-newsletter {
+    width: 35%;
+}
+
+footer div a, footer div p {
+    color: var(--gold);
+    line-height: 1.5;
+}
+
+footer div h2 {
+    color: var(--semi-beige);
+    margin-bottom: .5rem;
+}
+
+footer div li {
+    list-style: none;
+}
+
+footer .footer-newsletter input {
+    width: 40%;
+    height: 2.5rem;
+    border-radius: 2rem;
+    padding: 0 1rem;
+    background-color: var(--off-black);
+    border: 1px solid var(--gold);
+    color: var(--semi-beige);
+    outline: none;
+}
+
+footer .footer-newsletter button {
+    width: 7rem;
+    height: 2.5rem;
+    margin-left: .5rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: var(--off-black);
+    border: 1px solid var(--gold);
+    cursor: pointer;
+    color: var(--semi-beige);
+    font-size: .92rem;
+    transition: background-color 100ms ease-in-out, color 100ms ease-in-out;
+}
+
+footer .footer-newsletter input, footer .footer-newsletter button {
+    margin-top: .5rem;
+}
+
+footer .footer-newsletter button:hover {
+    background-color: var(--gold);
+    color: var(--off-black);
+}
+
+footer .rights {
+    color: #F0BB7830;
+}
