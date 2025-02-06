@@ -25,7 +25,7 @@ function Footer() {
                 </div>
                 <div className="footer-newsletter">
                     <h2>Newsletter</h2>
-                    <p>For receive last updates you can subscribe to our newsletter! Our team will be grateful with you.</p>
+                    <p>¡Para recibir las últimas actualizaciones de nuestra newsletter ingresa tu correo y te llegarán nuestras notificaciones y promociones únicas!</p>
                     <input type="email" placeholder='jhondoe@example.com'/>
                     <button>Suscribirse</button>
                 </div>
