@@ -1,11 +1,17 @@
 import { useState } from 'react'
 import '@styles/Footer.css'
 
-function Footer() {
+function Footer({ isShow }) {
     const [email, setEmail] = useState('')
 
-    const handleEmail = ({ target }) => {
-            setEmail(target.value)
+    const handleEmail = e => {
+        setEmail(e.target.value)
+    }
+
+    const handleEnter = e => {
+        if (e.key === 'Enter') {
+            handleSubmit()
+        }
     }
 
     const handleSubmit = () => {
@@ -21,6 +27,7 @@ function Footer() {
 
     return (
         <>
+        {isShow &&
             <footer>
                 <div className="links-newsletter-container">
                     <div className="footer-info">
@@ -44,12 +51,13 @@ function Footer() {
                     <div className="footer-newsletter">
                         <h2>Newsletter</h2>
                         <p>¡Para recibir las últimas actualizaciones de nuestra newsletter ingresa tu correo y te llegarán nuestras notificaciones y promociones únicas!</p>
-                        <input type="email" value={email} id="newsletterEmail" onChange={handleEmail} placeholder='jhondoe@example.com'/>
+                        <input type="email" value={email} id="newsletterEmail" onChange={handleEmail} onKeyDown={handleEnter} placeholder='jhondoe@example.com'/>
                         <button onClick={handleSubmit}>Suscribirse</button>
                     </div>
                 </div>
                 <p className="rights">&copy; BookHive 2025 All rights reserved.</p>
             </footer>
+            }
         </>
     )
 }
