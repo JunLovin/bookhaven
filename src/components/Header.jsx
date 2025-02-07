@@ -8,6 +8,7 @@ import shoppingBag from '@public/shoppingBag.svg'
 import DropDownMenu from './DropdownMenu'
 import Card from './Card'
 import Body from './Body'
+import Footer from './Footer'
 
 function Header() {
     const [isShow, setIsShow] = useState(true)
@@ -42,7 +43,7 @@ function Header() {
                 <DropDownMenu className="dropdown-mobile" id="dropdown-mobile" firstLi="One" secondLi="Two" thirdLi="Three" menuTitle="Opciones"/>
                 <div className="links-list">
                 <ul>
-                    <li><Link to="/d" className="link">One</Link></li>
+                    <li><Link to="/BookHaven" className="link">One</Link></li>
                     <li><Link to="/d" className="link">Two</Link></li>
                     <li><Link to="/d" className="link">Three</Link></li>
                     <DropDownMenu className="dropdown-menu" firstLi="BookHaven" secondLi="Creator" thirdLi="Contact" menuTitle="Información"/>
@@ -74,12 +75,13 @@ function Header() {
             {data.map((element, index) => {
                 return (
                 <Link to={`/book/${element.id}`} key={index} className="link">
-                    <Card items={element} id={element.id}/>
+                    <Card items={element} id={element.id} classNameImage='search-card'/>
                 </Link>
             )
             })}
         </div>
         <Body isShow={isShow}/>
+        <Footer isShow={!isShow}/>
         </>
     )
 }
