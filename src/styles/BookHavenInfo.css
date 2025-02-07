@@ -1,0 +1,87 @@
+body {
+    height: auto;
+    width: 100%;
+}
+
+.bookhaven-info {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--off-black);
+    color: var(--semi-beige);
+    z-index: -2;
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.bookhaven-info .info-container {
+    margin: 0 auto;
+    width: 700px;
+    height: max-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 1rem;
+    background-color: var(--off-black);
+    padding: 1rem;
+}
+
+.bookhaven-info .info-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.bookhaven-info .info-container p {
+    font-size: 1.1rem;
+    margin-bottom: .5rem;
+}
+
+.goback {
+    color: var(--gold);
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    text-decoration: none;
+    position: relative;
+    width: max-content;
+}
+
+.info-container::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: conic-gradient(from var(--angle), transparent 80%, var(--gold), var(--gold)); 
+    width: 100%;
+    height: 100%;
+    translate: -50% -50%;
+    padding: .7rem;
+    animation: spin 2.5s linear infinite;
+    z-index: -1;
+    border-radius: 1rem;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+.btw {
+    color: #CCCCCC50;
+    font-size: 1rem !important;
+    margin-top: 2rem;
+}
+
+a {
+    color: var(--gold);
+}
