@@ -1,0 +1,89 @@
+.creator-info-container {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--off-black);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: -2;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.creator-info {
+    margin: 0 auto;
+    width: 420px;
+    color: var(--semi-beige);
+    text-align: center;
+    position: relative;
+    padding: 2rem;
+    background-color: var(--off-black);
+    border-radius: 2rem;
+}
+
+.creator-info::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background: conic-gradient(from var(--angle), transparent 70%, var(--semi-beige), var(--semi-beige));
+    z-index: -1;
+    animation: spin 3s linear infinite;
+    padding: .6rem;
+    border-radius: 2rem;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+.creator-info h2 {
+    font-size: 3rem;
+}
+
+.creator-info p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.goback-creator {
+    color: var(--gold);
+    font-size: 1.1rem;
+    line-height: 1.5;
+    text-decoration: none;
+    position: relative;
+    width: max-content;
+    height: max-content;
+}
+
+@property --border {
+    initial-letter: 0%;
+}
+
+.goback-creator::before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    background-color: var(--gold);
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    transition: transform 100ms linear;
+}
+
+    .goback-creator:hover::before {
+    transform: scaleX(1);
+}
