@@ -23,9 +23,9 @@ function DropDownMenu({ menuTitle, className, firstLi, secondLi, thirdLi, id }) 
             </button>
             {isOpen && (
                 <div className="dropdown-content" onMouseOver={() => setIsOpen(true)}>
-                    <Link to="/d" className="dropdown-link">{firstLi}</Link>
-                    <Link to="/" className="dropdown-link">{secondLi}</Link>
-                    <Link to="/" className="dropdown-link">{thirdLi}</Link>
+                    <Link to="/BookHaven" className="dropdown-link">{firstLi}</Link>
+                    <Link to="/Creator" className="dropdown-link">{secondLi}</Link>
+                    <Link to="/Contact" className="dropdown-link">{thirdLi}</Link>
                 </div>
             )}
         </div>
