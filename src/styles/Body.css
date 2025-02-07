@@ -1,6 +1,39 @@
 .main-content {
-    height: 100%;
+    margin: 0 auto;
     width: 100%;
+    height: 100vh;
+}
+
+@media only screen and (max-width: 1000px) {
+    .main-content {
+        width: 100%;
+    }
+
+    .main-content .bg-change .overlay {
+        width: 100% !important;
+    }
+    .main-content .bg-change .overlay .overlay-text p {
+        width: 60% !important;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .main-content .bg-change {
+        height: 50vh !important;
+    }
+    .main-content .bg-change .overlay {
+        height: 50vh !important;
+    }
+    .main-content .bg-change .overlay .overlay-text h2 {
+        width: 100% !important;
+        font-size: 2.5rem !important;
+    }
+    .main-content .bg-change .overlay .overlay-text p {
+        width: 100% !important;
+    }
+    .main-content .bg-change .overlay .overlay-text {
+        padding: 4rem !important;
+    }
 }
 
 .main-content .bg-change {
@@ -11,14 +44,14 @@
 
 .main-content .bg-change .overlay {
     position: absolute;
-    margin: 0 auto;
     background: rgba(0,0,0, 0.5);
     width: 80%;
+    height: 75vh;
     z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 75vh;
+    cursor: auto;
 }
 
 .main-content .bg-change img {
@@ -36,9 +69,14 @@
     color: var(--semi-beige);
 }
 
-.main-content .bg-change .overlay .overlay-text button {
+.main-content .bg-change .overlay .overlay-text .link {
     width: 18rem;
     height: 3rem;
+}
+
+.main-content .bg-change .overlay .overlay-text button {
+    width: 100%;
+    height: 100%;
     border: 1px solid var(--gold);
     border-radius: .5rem;
     background-color: var(--off-black);
@@ -56,8 +94,7 @@
 
 .main-content .bg-change .overlay .overlay-text h2 {
     font-size: 3rem;
-    max-width: 100%;
-    min-width: 50%;
+    width: 100%;
     margin-bottom: 1.5rem;
 }
 
@@ -69,4 +106,54 @@
 
 .main-content .bg-change .overlay .overlay-text p .bookhive {
     font-weight: bold;
+}
+
+.book-cards-container {
+    margin: 0 auto;
+    margin-top: 4rem;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    columns: 3 30rem;
+    margin-bottom: 3rem;
+}
+
+.book-cards-container .book-cards-title h3 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.body-cards-link {
+    text-decoration: none;
+}
+
+.body-cards {
+    margin-bottom: 3rem;
+}
+
+.card-image-container {
+    width: 50%;
+}
+
+.body-cards .card {
+    display: flex;
+    flex-direction: column;
+}
+
+.body-cards .card .card-image-container img {
+    height: 20rem;
+}
+
+.body-cards .card .card-info-container {
+    color: var(--off-black);
+}
+
+.body-cards .card .card-info-container h2 {
+    font-size: 1.2rem;
+    margin-top: .5rem;
 }
