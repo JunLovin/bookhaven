@@ -127,3 +127,13 @@ header nav .heart-shopping img {
     border-right: 1px solid var(--gold);
     border-left: 1px solid var(--gold);
 }
+
+.search-card {
+    width: 16% !important;
+    margin-right: 1rem;
+}
+
+.search-card img {
+    height: 100%;
+    width: 100%;
+}
