@@ -8,6 +8,7 @@ import searchIcon from '@public/search.svg'
 import shoppingBag from '@public/shoppingBag.svg'
 import DropDownMenu from '../components/DropdownMenu';
 import Card from '../components/Card';
+import Footer from '../components/Footer';
 
 function DefaultError() {
 
@@ -42,7 +43,7 @@ function DefaultError() {
                 <DropDownMenu className="dropdown-mobile" id="dropdown-mobile" firstLi="One" secondLi="Two" thirdLi="Three" menuTitle="Opciones"/>
                 <div className="links-list">
                 <ul>
-                    <li><Link to="/d" className="link">One</Link></li>
+                    <li><Link to="/BookHaven" className="link">One</Link></li>
                     <li><Link to="/d" className="link">Two</Link></li>
                     <li><Link to="/d" className="link">Three</Link></li>
                     <DropDownMenu className="dropdown-menu" firstLi="BookHaven" secondLi="Creator" thirdLi="Contact" menuTitle="Información"/>
@@ -89,6 +90,7 @@ function DefaultError() {
             <p>This site is in maintanance or doesn&apos;t exist. Please <Link to="/" className="link">click here</Link> to go back</p>
             <p className="quote">Btw here&apos;s a dog reading! :D</p>
         </section>}
+            <Footer isShow={!isShow}/>
         </>
     )
 }
