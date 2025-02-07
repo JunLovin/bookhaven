@@ -6,8 +6,9 @@ import bg1 from '@public/images/bg1.webp'
 import bg2 from '@public/images/bg2.webp'
 import bg3 from '@public/images/bg3.webp'
 import Card from './Card'
+import Footer from './Footer'
 
-const bestSeller = ['VpQnEQAAQBAJ', 'Qu_GEAAAQBAJ', 'TSQUEQAAQBAJ', '89b5EAAAQBAJ', 'sbybDwAAQBAJ', 'OJjkEAAAQBAJ', 'fWxdDwAAQBAJ', 'AW24EAAAQBAJ', 'ryVnDwAAQBAJ', '1jwDEAAAQBAJ', 'reSgAAAAQBAJ', 'Rr86EQAAQBAJ', 'RZXQEAAAQBAJ']
+const bestSeller = ['VpQnEQAAQBAJ', 'Qu_GEAAAQBAJ', '89b5EAAAQBAJ', 'sbybDwAAQBAJ', 'OJjkEAAAQBAJ', 'fWxdDwAAQBAJ', 'AW24EAAAQBAJ', 'ryVnDwAAQBAJ', '1jwDEAAAQBAJ', 'reSgAAAAQBAJ', 'Rr86EQAAQBAJ', 'RZXQEAAAQBAJ']
 
 function Body({ isShow }) {
     const images = [bg0, bg1, bg2, bg3]
@@ -65,10 +66,11 @@ function Body({ isShow }) {
                     </div>
                     <div className="cards">
                         {bestSellerData.length > 0 ? bestSellerData.map((book, index) => (
-                            <Link key={index} to={`/book/${book.id}`}><Card items={book} /></Link>
+                            <Link key={index} className="body-cards-link" to={`/book/${book.id}`}><Card description={false} author={false} items={book} className="body-cards" /></Link>
                         )) : <div>Loading...</div>}
                     </div>
                 </article>
+                <Footer isShow={isShow}/>
             </section>
         }
         </>
