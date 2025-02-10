@@ -7,6 +7,7 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 0 1rem;
+    overflow: hidden;
 }
 
 footer .links-newsletter-container {
