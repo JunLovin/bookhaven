@@ -54,7 +54,6 @@ function Body({ isShow }) {
                             <div className="overlay-text">
                                 <h2>¡Lee los libros más vendidos!</h2>
                                 <p>Estamos capacitados con los últimos bestsellers del mercado y todo a un precio increíble. <span className="bookhive">¡Solo en BookHive!</span></p>
-                                
                                 <Link to={`/book/${ids[currentImage]}`} className="link"><button>{name[currentImage] && name[currentImage]}</button></Link>
                             </div>
                         </div>
