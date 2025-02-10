@@ -82,9 +82,15 @@
 }
 
 @media only screen and (max-width: 480px) {
+    .main-content .bg-change {
+        height: 70dvh !important;
+    }
+    .main-content .bg-change .overlay {
+        height: 100% !important;
+    }
     .main-content .bg-change img {
         position: relative;
-        left: -20   0px;
+        left: -120px;
     }
 }
 
