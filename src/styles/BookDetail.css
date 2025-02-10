@@ -18,6 +18,21 @@
     justify-content: center;
 }
 
+@media only screen and (max-width: 480px) {
+    .book-container {
+        width: 100% !important;
+        flex-direction: column !important;
+        padding: 0 !important;
+    }
+    .book-image-preview {
+        width: 100% !important; 
+    }
+    .book-info {
+        text-align: center;
+        width: 100% !important;
+    }
+}
+
 .book-image-preview {
     width: 40%;
     height: 100%;
