@@ -127,6 +127,16 @@ header nav .heart-shopping img {
     border-left: 1px solid var(--gold);
 }
 
+.search-card {
+    width: 16% !important;
+    margin-right: 1rem;
+}
+
+.search-card img {
+    height: 100%;
+    width: 100%;
+}
+
 @media only screen and (max-width: 480px) {
     .cards-container {
         display: flex;
