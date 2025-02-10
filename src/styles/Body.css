@@ -1,7 +1,7 @@
 .main-content {
     margin: 0 auto;
     width: 100%;
-    height: 100vh;
+    overflow: hidden;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -14,6 +14,15 @@
     }
     .main-content .bg-change .overlay .overlay-text p {
         width: 60% !important;
+    }
+    .main-content .bg-change {
+        width: 100% !important;
+    }
+    .main-content .bg-change img {
+        width: auto !important;
+        height: 100% !important;
+        position: relative;
+        left: -130px;
     }
 }
 
@@ -34,18 +43,23 @@
     .main-content .bg-change .overlay .overlay-text {
         padding: 4rem !important;
     }
+    .main-content .bg-change img {
+        width: 800px !important;
+        height: 100% !important;
+    }
 }
 
 .main-content .bg-change {
     margin: 0 auto;
     width: 80%;
     height: 75vh;
+    position: relative;
 }
 
 .main-content .bg-change .overlay {
     position: absolute;
     background: rgba(0,0,0, 0.5);
-    width: 80%;
+    width: 100%;
     height: 75vh;
     z-index: 10;
     display: flex;
@@ -54,9 +68,24 @@
     cursor: auto;
 }
 
+@media only screen and (max-width: 650px) {
+    .main-content .bg-change {
+        width: 100% !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
+}
+
 .main-content .bg-change img {
     width: 100%;
     height: 100%;
+}
+
+@media only screen and (max-width: 480px) {
+    .main-content .bg-change img {
+        position: relative;
+        left: -20   0px;
+    }
 }
 
 .main-content .bg-change .overlay .overlay-text {
@@ -126,6 +155,7 @@
 .book-cards-container .book-cards-title h3 {
     font-size: 3rem;
     margin-bottom: 3rem;
+    text-align: center;
 }
 
 .body-cards-link {
@@ -156,4 +186,12 @@
 .body-cards .card .card-info-container h2 {
     font-size: 1.2rem;
     margin-top: .5rem;
+}
+
+.main-content footer {
+    bottom: -10%;
+}
+
+.main-content .cards-container {
+    visibility: hidden !important;
 }
