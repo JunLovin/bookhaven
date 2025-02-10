@@ -75,7 +75,7 @@ function Header() {
             {data.map((element, index) => {
                 return (
                 <Link to={`/book/${element.id}`} key={index} className="link">
-                    <Card items={element} id={element.id} classNameImage='search-card'/>
+                    <Card items={element} id={element.id} classNameImage='card-image-container'/>
                 </Link>
             )
             })}
