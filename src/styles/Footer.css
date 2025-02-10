@@ -81,3 +81,35 @@ footer .footer-newsletter button:hover {
 footer .rights {
     color: #F0BB7830;
 }
+
+@media only screen and (max-width: 480px) {
+    footer {
+        height: auto !important ;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        flex-wrap: wrap !important;
+    }
+    .links-newsletter-container {
+        padding: 2rem 0;
+        flex-wrap: wrap !important; 
+        width: 100% !important;
+        flex-direction: row !important;
+        align-items: start !important;
+        justify-content: space-between !important;
+        text-align: center !important;
+    }
+    .footer-info, .footer-contact {
+        width: 40% !important;
+    }
+    .footer-newsletter {
+        margin-top: 1rem;
+        width: 100% !important;
+    }
+    .footer-newsletter input {
+        width: 90% !important;
+    }
+    .rights {
+        display: none !important;
+    }
+}
