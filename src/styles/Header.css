@@ -83,16 +83,15 @@ header nav ul li .link::after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
     background-color: var(--gold);
-    transform: scaleX(0);
-    transition: transform 100ms ease-out;
+    transition: width 100ms ease-out;
 } 
 
 header nav ul li .link:hover::after {
-    transform: scaleX(1);
+    width: 100%;
 }
 
 header nav .heart-shopping {
@@ -136,4 +135,8 @@ header nav .heart-shopping img {
 .search-card img {
     height: 100%;
     width: 100%;
+}
+
+.cards-container {
+    max-width: 100%;
 }
